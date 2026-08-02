@@ -1,0 +1,113 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "agent": {
+    "main": {
+      "description": "Primary coding agent"
+    },
+    "build": {
+      "disable": false
+    },
+    "plan": {
+      "disable": false
+    }
+  },
+  "username": "",
+  "provider": {
+    "google-vertex": {
+      "options": {
+        "project": "saffron-health",
+        "location": "global"
+      }
+    },
+    "openai": {
+      "models": {
+        "gpt-5": {
+          "options": {
+            "reasoningEffort": "high",
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+            "include": ["reasoning.encrypted_content"]
+          }
+        }
+      }
+    },
+    "anthropic": {
+      "models": {
+        "claude-opus-4-5-20251101": {
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 16000
+            }
+          }
+        }
+      }
+    },
+    // === NOUVELLES ENTRÉES POUR TES 3 SERVEURS LM STUDIO ===
+    "lmstudio-serveur": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio - Serveur",
+      "options": {
+        "baseURL": "http://192.168.0.146:1234/v1"
+      },
+      "models": {
+        "qwen/qwen3.5-4b": {
+          "name": "Qwen 3.5 4B (Serveur)"
+        },
+        "qwen/qwen3.5-9b": {
+          "name": "Qwen 3.5 9B (Serveur)"
+        }
+      }
+    },
+    "lmstudio-Bazzite": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio - Bazzite",
+      "options": {
+        "baseURL": "http://192.168.0.23:1234/v1"
+      },
+      "models": {
+        "google/gemma-4-12b": {
+          "name": "Gemma 4 12B (Bazzite)"
+        },
+        "qwen/qwen3-coder-30b": {
+          "name": "Qwen3 Coder 30B (Bazzite)"
+        },
+        "qwen/qwen3.6-35b-a3b": {
+          "name": "Qwen3.6 35B a3b (Bazzite)"
+        },
+        "qwen/qwen3-coder-next": {
+          "name": "Qwen3 Coder Next 80B (Bazzite)"
+        },
+        "qwen/qwen3.5-9b": {
+          "name": "Qwen 3.5 9B (Bazzite)"
+        }
+      }
+    },
+    "lmstudio-lenovo": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio - Lenovo",
+      "options": {
+        "baseURL": "http://192.168.0.205:1234/v1"
+      },
+      "models": {
+        "google/gemma-4-12b": {
+          "name": "Gemma 4 12B (Lenovo)"
+        },
+        "qwen/qwen3.5-9b": {
+          "name": "Qwen 3.5 9B (Lenovo)"
+        }
+      }
+    }
+  },
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "gcloud *": "ask",
+      "*DB_TARGET=production*": "ask",
+      "*NODE_ENV=production*": "ask"
+    }
+  },
+  "mcp": {}
+}
+

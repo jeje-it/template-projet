@@ -1,0 +1,39 @@
+# ==========================================
+# Dépendances (On ne les copie pas, Docker les installe via npm install)
+# ==========================================
+node_modules
+npm-debug.log
+
+# ==========================================
+# Environnement (On passe les variables via docker-compose ou secrets)
+# ==========================================
+.env
+.env.local
+.env.*.local
+
+# ==========================================
+# Git (Pas besoin du repo git dans le container)
+# ==========================================
+.git
+.gitignore
+
+# ==========================================
+# Éditeurs et IDE
+# ==========================================
+.vscode
+.idea
+*.swp
+*.swo
+
+# ==========================================
+# OS
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Documentation (Inutile dans le build)
+# ==========================================
+README.md
+LICENSE
+CHANGELOG.md

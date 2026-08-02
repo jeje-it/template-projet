@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:14.1
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+      
+  auth:
+    image: supabase/gotrue:v2.140.0
+    depends_on: [db]
+    environment:
+      DB_URL: postgres://postgres:password@db:5432/postgres
+      API_EXTERNAL_URL: http://localhost:9999
+      GOTRUE_JWT_SECRET: secret
+      GOTRUE_SITE_URL: http://localhost:5173
+      GOTRUE_MAILER_AUTOCONFIRM: true
+    ports:
+      - "9999:9999"
+      
+  storage:
+    image: supabase/storage-api:0.42.4
+    depends_on: [db, auth]
+    environment:
+      DB_URL: postgres://postgres:password@db:5432/postgres
+      ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTd9.CRWX_Tx5t8T2Qm2k6V6D_d0g
+    ports:
+      - "5000:5000"
+
+volumes:
+  postgres_data:

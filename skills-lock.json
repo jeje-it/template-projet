@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "computedHash": "a674b7d81066e3cc471a7512ddb4ae724418cbfefa75cbb050b0dc430e4d57a0"
+    },
+    "ai-sdk": {
+      "source": "vercel/ai",
+      "sourceType": "github",
+      "skillPath": "skills/use-ai-sdk/SKILL.md",
+      "computedHash": "da25c27a274ef2b71017c255f95a26350d2519765a75cb54ee1a37872b121dab"
+    },
+    "create-adaptable-composable": {
+      "source": "vuejs-ai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/create-adaptable-composable/SKILL.md",
+      "computedHash": "2f215126499d29a733be980ef9ce8f4ffb5f25a8831aec965d86c0cd21b2c5d2"
+    },
+    "create-github-action-workflow-specification": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/create-github-action-workflow-specification/SKILL.md",
+      "computedHash": "527e6c77d921d58a9d0059aa95d0d14b441d2166f9c20518263048a56ca8fbbb"
+    },
+    "docker-best-practices": {
+      "source": "josiahsiegel/claude-plugin-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/docker-master/skills/docker-best-practices/SKILL.md",
+      "computedHash": "aa4f4c45dc4b71aa392a8cf204e5610426fe2534db9cc4c0c26a335f04cf5a68"
+    },
+    "docker-containerization": {
+      "source": "ailabs-393/ai-labs-claude-skills",
+      "sourceType": "github",
+      "skillPath": "packages/skills/docker-containerization/SKILL.md",
+      "computedHash": "6ce7d7d9c41cf4904a588c2960e0934a94bfe6771b73c8245e14353dc4577002"
+    },
+    "docker-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/docker-patterns/SKILL.md",
+      "computedHash": "b9b2764274bb4e4d1c398bf0214b528b547edc4847690b861b0b1ef5d8900934"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
+    },
+    "github-actions": {
+      "source": "callstackincubator/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/github-actions/SKILL.md",
+      "computedHash": "3632dc997b2d8810bdc753173e269dfc0fd40b6fe6be0dd27b8f2abc58e47ada"
+    },
+    "github-actions-templates": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/cicd-automation/skills/github-actions-templates/SKILL.md",
+      "computedHash": "93e92fd674dea084628e95f9c48af806f9672ac08f815c84f85adedb55742c59"
+    },
+    "multi-stage-dockerfile": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/multi-stage-dockerfile/SKILL.md",
+      "computedHash": "698bf93a84dae18fd7bd0b1d35c21427307fde78fbdf4624be9726f5f98189ca"
+    },
+    "pinia": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "skillPath": "skills/pinia/SKILL.md",
+      "computedHash": "897b6b0982956f41f5cc85128ca638b625e1b3c8bc619e303cd1e7661c95b7de"
+    },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "computedHash": "f602822b51bcb6d033749c60731b8f1e80f308222fcb2e4af551905a817c6e08"
+    },
+    "screenshot": {
+      "source": "marmutapp/superbased-opencode-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/screenshot/SKILL.md",
+      "computedHash": "c689de4f1b4da003233e23c7ec1913b12af24402b9411b43fb49cffb4b4d8b96"
+    },
+    "unit-test-vue-pinia": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/unit-test-vue-pinia/SKILL.md",
+      "computedHash": "ef6e0d48f9932bcfb6220f2790fb5cfc3c1e84b17e04e9ec219331489b47a66f"
+    },
+    "vue": {
+      "source": "vercel-labs/json-render",
+      "sourceType": "github",
+      "skillPath": "skills/vue/SKILL.md",
+      "computedHash": "48423d8d0c69b434ce564f5b05dd66c9767acc77bc8c82fec3f0bf98256089bb"
+    },
+    "vue-expert-js": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vue-expert-js/SKILL.md",
+      "computedHash": "f9480e6f932c64f0f87a609691bbf587978f21017f9104b4010c4890b03dea16"
+    },
+    "vuejs-typescript-best-practices": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "vuejs-typescript-best-practices/SKILL.md",
+      "computedHash": "deb125e9ecdd506532c4eb0646de4167be31393a3b34906cbaacf612f87e4d18"
+    }
+  }
+}
