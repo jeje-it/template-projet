@@ -14,27 +14,33 @@
   },
   "username": "",
   "provider": {
-    "google-vertex": {
-      "options": {
-        "project": "saffron-health",
-        "location": "global"
-      }
-    },
     "openai": {
       "models": {
         "gpt-5": {
           "options": {
             "reasoningEffort": "high",
             "textVerbosity": "low",
-            "reasoningSummary": "auto",
-            "include": ["reasoning.encrypted_content"]
+            "reasoningSummary": "auto"
+          }
+        },
+        "gpt-4o": {
+          "options": {
+            "textVerbosity": "low"
           }
         }
       }
     },
     "anthropic": {
       "models": {
-        "claude-opus-4-5-20251101": {
+        "claude-sonnet-4-20250514": {
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 8000
+            }
+          }
+        },
+        "claude-opus-4-20250514": {
           "options": {
             "thinking": {
               "type": "enabled",
@@ -44,58 +50,29 @@
         }
       }
     },
-    // === NOUVELLES ENTRÉES POUR TES 3 SERVEURS LM STUDIO ===
-    "lmstudio-serveur": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "LM Studio - Serveur",
+    "google-vertex": {
       "options": {
-        "baseURL": "http://192.168.0.146:1234/v1"
+        "project": "",
+        "location": "global"
       },
       "models": {
-        "qwen/qwen3.5-4b": {
-          "name": "Qwen 3.5 4B (Serveur)"
-        },
-        "qwen/qwen3.5-9b": {
-          "name": "Qwen 3.5 9B (Serveur)"
+        "gemini-2.5-pro": {
+          "name": "Gemini 2.5 Pro"
         }
       }
     },
-    "lmstudio-Bazzite": {
+    "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "LM Studio - Bazzite",
+      "name": "LM Studio",
       "options": {
-        "baseURL": "http://192.168.0.23:1234/v1"
+        "baseURL": "http://localhost:1234/v1"
       },
       "models": {
-        "google/gemma-4-12b": {
-          "name": "Gemma 4 12B (Bazzite)"
+        "qwen/qwen3.6-35b-a3b": {
+          "name": "Qwen3.6 35B A3B"
         },
         "qwen/qwen3-coder-30b": {
-          "name": "Qwen3 Coder 30B (Bazzite)"
-        },
-        "qwen/qwen3.6-35b-a3b": {
-          "name": "Qwen3.6 35B a3b (Bazzite)"
-        },
-        "qwen/qwen3-coder-next": {
-          "name": "Qwen3 Coder Next 80B (Bazzite)"
-        },
-        "qwen/qwen3.5-9b": {
-          "name": "Qwen 3.5 9B (Bazzite)"
-        }
-      }
-    },
-    "lmstudio-lenovo": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "LM Studio - Lenovo",
-      "options": {
-        "baseURL": "http://192.168.0.205:1234/v1"
-      },
-      "models": {
-        "google/gemma-4-12b": {
-          "name": "Gemma 4 12B (Lenovo)"
-        },
-        "qwen/qwen3.5-9b": {
-          "name": "Qwen 3.5 9B (Lenovo)"
+          "name": "Qwen3 Coder 30B"
         }
       }
     }
@@ -110,4 +87,3 @@
   },
   "mcp": {}
 }
-

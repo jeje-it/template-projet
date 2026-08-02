@@ -1,9 +1,20 @@
+# ==========================================
+# Template Infrastructure - Supabase Local
+# ==========================================
+# Variables utilisées :
+#   POSTGRES_PASSWORD, GOTRUE_JWT_SECRET, ANON_KEY
+#   API_EXTERNAL_URL, GOTRUE_SITE_URL
+# Copier .env.example en .env et remplir les valeurs
+# ==========================================
+
 services:
   db:
     image: postgres:14.1
     restart: always
+    env_file:
+      - .env
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
       POSTGRES_DB: postgres
     ports:
       - "5432:5432"
@@ -13,11 +24,13 @@ services:
   auth:
     image: supabase/gotrue:v2.140.0
     depends_on: [db]
+    env_file:
+      - .env
     environment:
-      DB_URL: postgres://postgres:password@db:5432/postgres
-      API_EXTERNAL_URL: http://localhost:9999
-      GOTRUE_JWT_SECRET: secret
-      GOTRUE_SITE_URL: http://localhost:5173
+      DB_URL: postgres://postgres:${POSTGRES_PASSWORD:-password}@db:5432/postgres
+      API_EXTERNAL_URL: ${API_EXTERNAL_URL:-http://localhost:9999}
+      GOTRUE_JWT_SECRET: ${GOTRUE_JWT_SECRET:-secret}
+      GOTRUE_SITE_URL: ${GOTRUE_SITE_URL:-http://localhost:5173}
       GOTRUE_MAILER_AUTOCONFIRM: true
     ports:
       - "9999:9999"
@@ -25,9 +38,11 @@ services:
   storage:
     image: supabase/storage-api:0.42.4
     depends_on: [db, auth]
+    env_file:
+      - .env
     environment:
-      DB_URL: postgres://postgres:password@db:5432/postgres
-      ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTd9.CRWX_Tx5t8T2Qm2k6V6D_d0g
+      DB_URL: postgres://postgres:${POSTGRES_PASSWORD:-password}@db:5432/postgres
+      ANON_KEY: ${ANON_KEY}
     ports:
       - "5000:5000"
 

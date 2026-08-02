@@ -13,6 +13,12 @@
       "skillPath": "skills/use-ai-sdk/SKILL.md",
       "computedHash": "da25c27a274ef2b71017c255f95a26350d2519765a75cb54ee1a37872b121dab"
     },
+    "antfu-design": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "skillPath": "skills/antfu-design/SKILL.md",
+      "computedHash": "3fb42ec43179f38f60106e1ba20f46d660d54e916f9362e4c89ba0abaeaa3dfc"
+    },
     "create-adaptable-composable": {
       "source": "vuejs-ai/skills",
       "sourceType": "github",
@@ -24,6 +30,12 @@
       "sourceType": "github",
       "skillPath": "skills/create-github-action-workflow-specification/SKILL.md",
       "computedHash": "527e6c77d921d58a9d0059aa95d0d14b441d2166f9c20518263048a56ca8fbbb"
+    },
+    "docker": {
+      "source": "bobmatnyc/claude-mpm-skills",
+      "sourceType": "github",
+      "skillPath": "toolchains/universal/infrastructure/docker/SKILL.md",
+      "computedHash": "3c57541dcc88296a0362912ccf113387e50996cdf12e44a284bb5c798f285808"
     },
     "docker-best-practices": {
       "source": "josiahsiegel/claude-plugin-marketplace",
@@ -91,11 +103,35 @@
       "skillPath": "skills/screenshot/SKILL.md",
       "computedHash": "c689de4f1b4da003233e23c7ec1913b12af24402b9411b43fb49cffb4b4d8b96"
     },
+    "tailwind-4-docs": {
+      "source": "lombiq/tailwind-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tailwind-4-docs/SKILL.md",
+      "computedHash": "de756f5f03cc20a029983875b00b9dfef9d0ba8567d242c5cbb0262037d0a134"
+    },
+    "tailwindcss-advanced-layouts": {
+      "source": "josiahsiegel/claude-plugin-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/tailwindcss-master/skills/tailwindcss-advanced-layouts/SKILL.md",
+      "computedHash": "159d8a8f9eb20136492a9971633fd8658be1e34d5f8dc3bcf1afe7bbb4511bdf"
+    },
+    "ts-library": {
+      "source": "onmax/nuxt-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ts-library/SKILL.md",
+      "computedHash": "4c33b682fad3e3323e4e8c71ee019f380699802030d147469f4564afe04fb867"
+    },
     "unit-test-vue-pinia": {
       "source": "github/awesome-copilot",
       "sourceType": "github",
       "skillPath": "skills/unit-test-vue-pinia/SKILL.md",
       "computedHash": "ef6e0d48f9932bcfb6220f2790fb5cfc3c1e84b17e04e9ec219331489b47a66f"
+    },
+    "unocss": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "skillPath": "skills/unocss/SKILL.md",
+      "computedHash": "4b7a9f7b89994d5aef70b9d55cb7f65d6e80cea437d5786cd33bb5cf7231c7c4"
     },
     "vue": {
       "source": "vercel-labs/json-render",

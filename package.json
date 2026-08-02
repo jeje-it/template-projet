@@ -1,13 +1,16 @@
 {
-    "name": "mon-template-projet",
+    "name": "vue3-template",
     "private": true,
-    "version": "0.0.1",
+    "version": "1.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+        "format": "prettier --write src/**/*.{vue,js,jsx,css,scss,md}",
+        "test": "vitest",
+        "test:ui": "vitest --ui"
     },
     "dependencies": {
         "vue": "^3.4.21",
@@ -20,6 +23,12 @@
         "@vitejs/plugin-vue": "^5.0.4",
         "vite": "^5.2.0",
         "eslint": "^8.56.0",
-        "eslint-plugin-vue": "^9.21.1"
+        "eslint-plugin-vue": "^9.21.1",
+        "prettier": "^3.2.5",
+        "@unocss/vite": "^0.60.0",
+        "unocss": "^0.60.0",
+        "vitest": "^1.4.0",
+        "@vue/test-utils": "^2.4.5",
+        "happy-dom": "^14.0.0"
     }
 }
